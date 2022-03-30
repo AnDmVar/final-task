@@ -27,7 +27,7 @@ public class Subject {
         this(name, MarksEnum.NotPassed.getGrade());
     }
 
-    public static boolean isExam(int mark) {
+    public boolean isExam(int mark) {
         if (mark == 0 || mark == 1) {
             return false;
         } else return true;
