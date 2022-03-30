@@ -32,7 +32,21 @@ public class Student {
         this.subjects = subjects;
     }
 
-    public Subject[] listSubjects(){
-        return subjects.clone();
+    public Subject[] listSubjects() {
+        Subject[] deepCopyOnSubjectsArray = new Subject[subjects.length];
+
+        Subject subject = null;
+        Subject deepCopyOnSubject = null;
+        for (int i = 0; i < subjects.length; i++) {
+            subject = subjects[i];
+
+            deepCopyOnSubject = new Subject(
+                    new String(subject.getName()),
+                    subject.getMark()
+            );
+
+            deepCopyOnSubjectsArray[i] = deepCopyOnSubject;
+        }
+        return deepCopyOnSubjectsArray;
     }
 }
