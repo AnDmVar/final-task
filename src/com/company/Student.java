@@ -1,11 +1,9 @@
 package com.company;
 
 public class Student {
-    //Атрибуты
     private String fName, sName, mName;
     private Subject[] subjects;
 
-    //Свойства
     public String getfName(String fName) {
         return fName;
     }
@@ -27,7 +25,6 @@ public class Student {
         this.mName = mName;
     }
 
-    //Конструктор
     public Student(String fName, String sName, String mName, Subject[] subjects) {
         this.fName = fName;
         this.sName = sName;
@@ -35,7 +32,6 @@ public class Student {
         this.subjects = subjects;
     }
 
-    //Метод
     public Subject[] listSubjects(){
         return subjects.clone();
     }
