@@ -76,7 +76,7 @@ public class Main {
         Subject[] subjectsPerson = person.listSubjects();
         for (Subject variable : subjectsPerson) {
             Integer mark = variable.getMark();
-            if (mark != 0 && mark != 1) {
+            if (variable.isExam(mark)) {
                 count += 1;
                 sum = sum + mark;
             }
