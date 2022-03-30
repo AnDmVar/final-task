@@ -27,9 +27,8 @@ public class Subject {
         this(name, MarksEnum.NotPassed.getGrade());
     }
 
-    public boolean isExam(int mark) {
-        if (mark == 0 || mark == 1) {
-            return false;
-        } else return true;
+    public boolean isExam() {
+        return !(this.mark == MarksEnum.Passed.getGrade() ||
+                this.mark == MarksEnum.NotPassed.getGrade());
     }
 }
